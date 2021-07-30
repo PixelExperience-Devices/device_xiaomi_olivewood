@@ -48,6 +48,10 @@ on init
     setprop ro.vendor.hw.device ${ro.boot.device}
     setprop ro.vendor.hw.radio ${ro.boot.radio}
 
+# FM
+on property:hw.fm.init=*
+    write /sys/class/fm/fm_lan_enable/lan_enable ${hw.fm.init}
+
 on property:ro.vendor.hw.dualsim=true
     setprop persist.radio.multisim.config dsds
 

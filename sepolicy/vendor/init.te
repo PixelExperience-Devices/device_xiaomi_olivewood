@@ -1,4 +1,5 @@
 allow init wcnss_device:chr_file write;
+allow init sysfs_fm_lan:file rw_file_perms;
 
 # Allow init to bind mount gps_debug.conf
 allow init system_file:file mounton;
