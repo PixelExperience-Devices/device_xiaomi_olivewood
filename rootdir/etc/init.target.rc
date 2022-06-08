@@ -52,6 +52,9 @@ on init
 on property:hw.fm.init=*
     write /sys/class/fm/fm_lan_enable/lan_enable ${hw.fm.init}
 
+on property:vendor.hw.fm.ant.enable=*
+    write /sys/class/fm/fm_lan_enable/lan_enable ${vendor.hw.fm.ant.enable}
+
 on property:ro.vendor.hw.dualsim=true
     setprop persist.radio.multisim.config dsds
 
